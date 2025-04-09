@@ -48,12 +48,17 @@ if __name__ == '__main__':
 
     # Alumno: Crear una "figura" y crear un "ax" con add_subplot
     # Graficar el "line plot" de "y" en función de "x"
-
+    fig = plt.figure()
+    ax = fig.add_subplot(1, 1, 1)
+    ax.plot(x, y, label='y = x²', color='blue', linewidth=2)
     # Alumno: Colocar la leyenda y el label con el nombre de la función
     # Darle color a la línea a su elección
-
+    ax.set_title("Gráfico de y = x²")
+    ax.set_xlabel("Eje X")
+    ax.set_ylabel("Eje Y")
+    ax.legend()
     # Crear acá su gráfico
-
+    plt.show()
     line_plot()
 
     print("terminamos")
