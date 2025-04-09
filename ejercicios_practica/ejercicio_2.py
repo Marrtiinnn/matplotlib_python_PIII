@@ -60,14 +60,28 @@ if __name__ == '__main__':
 
     # Alumno: Realizar un gráfico que representen las dos funciones
     # Para ello se debe llamar dos veces a "plot" con el mismo "ax"
-
+    
     # Se debe colocar en la leyenda la función que representa
     # cada función
-
+    
     # Cada función dibujarla con un color distinto
     # a su elección
 
     # Crear acá su gráfico 
+    
+    fig = plt.figure()
+    ax = fig.add_subplot()
+
+    ax.plot(x, y1, color='blue', marker='^', label='y1 = x**2')
+    ax.plot(x, y2, color='orange', marker='x', label='y2 = x**3')
+
+    ax.set_title("Funciones cuadrática y cúbica")
+    ax.set_xlabel("Eje X")
+    ax.set_ylabel("Eje Y")
+   
+    ax.legend()
+
+    plt.show()
 
     multi_plot()  
 
