@@ -58,6 +58,17 @@ if __name__ == '__main__':
 
     # Crear acá su gráfico
 
+    fig = plt.figure()
+    ax = fig.add_subplot()
+    
+    ax.scatter(x, y, color = 'red', marker='o', label='y=tanh(x)')
+    ax.set_title('Funcion tangente')
+    ax.set_xlabel('x')
+    ax.set_ylabel('y')
+    ax.grid(True)
+
+    plt.show()
+    
     scatter_plot()
 
     print("terminamos")
